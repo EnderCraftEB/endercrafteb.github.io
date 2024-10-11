@@ -51,7 +51,7 @@ fetch(jarUrl)
             });
 
             // Load background image for the body
-            return zip.file('website/stone_bricks.png').async('base64'); // Update with the correct path
+            return zip.file('assets/minecraft/textures/block/stone"_brick.png').async('base64'); // Update with the correct path
         }).then(function(base64) {
             // Set the background image for the body
             document.body.style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
@@ -61,7 +61,7 @@ fetch(jarUrl)
         });
 
         // Load header background image
-        return zip.file('path/to/your/header/background/image.png').async('base64'); // Update with the correct path
+        return zip.file('assets/endercraft/textures/block/brown_planks.png').async('base64'); // Update with the correct path
     }).then(function(base64) {
         // Set the background image for the header
         document.querySelector('header').style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
