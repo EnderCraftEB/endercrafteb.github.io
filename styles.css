@@ -30,7 +30,10 @@ header {
 
 .logo img {
     max-width: 260px; 
-    height: 48px; 
+    height: auto; 
+}
+.logo {
+    height: auto;
 }
 
 ul {
