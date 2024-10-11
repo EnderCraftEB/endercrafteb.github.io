@@ -27,7 +27,6 @@ header {
 
 
 .header-container {
-    width: 1000px; /* Fixed width for header content */
     margin: 0; /* Removed auto margin to left align */
     display: flex; /* Use flexbox for alignment */
     align-items: left; /* Center vertically */
