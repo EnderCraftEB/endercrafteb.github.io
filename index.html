@@ -33,28 +33,43 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
     <script>
-        const jarUrl = "https://endercrafteb.github.io/latest/endercraft.jar";
-
-        fetch(jarUrl)
-            .then(response => response.blob())
-            .then(blob => {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    JSZip.loadAsync(e.target.result).then(function(zip) {
-                        return zip.file('assets/minecraft/textures/gui/title/minecraft.png').async('base64');
-                    }).then(function(base64) {
-                        const img = document.createElement('img');
-                        img.src = 'data:image/png;base64,' + base64;
-                        document.getElementById('logo').appendChild(img);
-                    }).catch(function(error) {
-                        console.error("Error extracting assets from the JAR: ", error);
-                    });
-                };
-                reader.readAsArrayBuffer(blob);
-            })
-            .catch(error => {
-                console.error("Error fetching JAR file: ", error);
+// Fetch the JAR file
+fetch(jarUrl)
+    .then(response => response.blob())
+    .then(blob => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            JSZip.loadAsync(e.target.result).then(function(zip) {
+                // Load logo
+                return zip.file('assets/minecraft/textures/gui/title/minecraft.png').async('base64');
+            }).then(function(base64) {
+                const img = document.createElement('img');
+                img.src = 'data:image/png;base64,' + base64;
+                document.getElementById('logo').appendChild(img);
+            }).catch(function(error) {
+                console.error("Error extracting logo from the JAR: ", error);
             });
+
+            // Load background image for the body
+            return zip.file('website/stone_bricks.png').async('base64'); // Update with the correct path
+        }).then(function(base64) {
+            // Set the background image for the body
+            document.body.style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
+            document.body.style.backgroundRepeat = 'repeat'; // Ensure the body background tiles
+        }).catch(function(error) {
+            console.error("Error extracting assets from the JAR: ", error);
+        });
+
+        // Load header background image
+        return zip.file('path/to/your/header/background/image.png').async('base64'); // Update with the correct path
+    }).then(function(base64) {
+        // Set the background image for the header
+        document.querySelector('header').style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
+        document.querySelector('header').style.backgroundSize = 'cover'; // Ensure the header background covers the area
+    }).catch(function(error) {
+        console.error("Error extracting header background from the JAR: ", error);
+    });
+
     </script>
 </body>
 </html>
