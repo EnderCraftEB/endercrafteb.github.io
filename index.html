@@ -47,17 +47,14 @@
                         const img = document.createElement('img');
                         img.src = 'data:image/png;base64,' + base64;
                         document.getElementById('logo').appendChild(img);
-                        document.getElementById('status').textContent = "Logo loaded!";
                     }).catch(function(error) {
                         console.error("Error extracting assets from the JAR: ", error);
-                        document.getElementById('status').textContent = "Failed to load logo.";
                     });
                 };
                 reader.readAsArrayBuffer(blob);
             })
             .catch(error => {
                 console.error("Error fetching JAR file: ", error);
-                document.getElementById('status').textContent = "Failed to load the mod's JAR file.";
             });
     </script>
 </body>
