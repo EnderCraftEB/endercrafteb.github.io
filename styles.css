@@ -1,53 +1,20 @@
+/* General page styles */
 body {
-    font-family: 'Press Start 2P', cursive; /* Using the pixelated font */
-    background-color: #282c34; /* Example background color */
-    color: #ffffff; /* Example text color */
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header section */
 header {
-    display: flex; /* Makes the header a flex container */
-    justify-content: space-between; /* Space between logo and nav */
-    align-items: center; /* Vertically center items */
-    padding: 20px; /* Adds some space around the header */
+    background-color: rgb(33, 23, 16); /* Dark header background */
+    background-image: url('https://archive.ph/EbOdX/2098679e526a5553e9c2c9fa65d5e23621271d39.png'); /* Example background image */
+    background-size: cover; /* Cover the entire header */
+    height: 48px; /* Fixed height */
+    position: relative;
 }
-
-ul {
-    text-align: left;
-    font: inherit;
-    vertical-align: baseline;
-    font-size: 16px;
-    font-weight: bold;
-    width: 415px;
-    float: left;
-    list-style: none outside none;
-    border-width: 0px;
-    border-style: none;
-    margin: 0px;
-    padding: 14px 0px 0px;
-    border-color: white;
-}
-
-nav ul {
-    list-style-type: none; /* Removes bullet points */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-}
-
-nav ul li {
-    display: inline; /* Displays items inline */
-    margin-right: 20px; /* Space between items */
-}
-
-nav ul li a {
-    color: #ffffff; /* Link color */
-    text-decoration: none; /* No underline */
-    font-weight: bold; /* Bold text */
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
 
 .header-container {
     width: 1000px; /* Fixed width for header content */
@@ -61,6 +28,59 @@ nav ul li a:hover {
 .logo img {
     max-width: 260px; /* Slightly larger logo size */
     height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to grow and fill space */
+}
+
+nav ul {
+    display: flex; /* Display list items in a row */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Center nav items vertically */
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between nav items */
+    position: relative; /* For dropdown positioning */
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255); /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px; /* Set font size */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Dropdown styles */
+nav ul li .dropdown {
+    display: none; /* Hide dropdown initially */
+    position: absolute; /* Position relative to parent li */
+    top: 100%; /* Place below the nav item */
+    left: 0; /* Align to the left */
+    background-color: rgb(51, 51, 51); /* Dark background for dropdown */
+    padding: 10px 0; /* Padding around dropdown items */
+    z-index: 5; /* Ensure dropdown is above other elements */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+nav ul li .dropdown li {
+    margin: 0; /* Remove margin for dropdown items */
+}
+
+nav ul li .dropdown li a {
+    padding: 6px 10px; /* Padding for dropdown links */
+    display: block; /* Block display for full click area */
+    color: rgb(255, 255, 255); /* White text for dropdown links */
 }
 
 .login-container {
