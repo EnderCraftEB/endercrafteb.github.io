@@ -10,7 +10,6 @@ body {
 /* Header section */
 header {
     background-color: rgb(33, 23, 16); /* Dark header background */
-    background-image: url('https://archive.ph/EbOdX/2098679e526a5553e9c2c9fa65d5e23621271d39.png'); /* Example background image */
     background-size: cover; /* Cover the entire header */
     height: 48px; /* Fixed height */
     position: relative;
