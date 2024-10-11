@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Miracode'; /* Name to use for the font */
+    src: url('https://github.com/IdreesInc/Miracode/releases/download/v1.0/Miracode.ttf') format('truetype'); /* URL to the font file */
+    font-weight: normal; /* Adjust as needed */
+    font-style: normal; /* Adjust as needed */
+}
+
 body {
     text-align: left;
     overflow-x: auto;
@@ -8,7 +15,7 @@ body {
 }
 
 header {
-    font: inherit;
+    font: Miracode;
     display: inline;
     height: 48px;
     background-color: rgb(33, 23, 16);
@@ -116,7 +123,7 @@ main p {
 .download-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3c6e71;
+    background-color: #8729DA;
     color: white;
     text-decoration: none;
     font-size: 18px;
