@@ -4,7 +4,7 @@ body {
     overflow-x: auto;
     overflow-y: auto;
     background-color: rgb(17, 17, 17);
-    background-size: 1%;
+    background-size: 2%;
     margin: 0;
     image-rendering: pixelated;
 
@@ -23,7 +23,7 @@ text-align:left;
     margin: 0px;
     padding: 0px;
     border-color: white;
-    background-size: 1%; /* Scale the background by 200% */
+    background-size: 2%; /* Scale the background by 200% */
     image-rendering: pixelated;
 }
 
