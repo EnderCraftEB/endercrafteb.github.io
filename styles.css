@@ -12,7 +12,7 @@ body {
     background-color: rgb(17, 17, 17);
     background-size: 1%;
     margin: 0;
-    font: Miracode;
+    font-family: 'Miracode', sans-serif;
 }
 
 header {
