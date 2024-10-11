@@ -69,7 +69,7 @@ fetch(jarUrl)
                         return zip.file('assets/endercraft/textures/block/brown_planks.png').async('base64'); // Update with the correct path
                     }).then(function(base64) {
                         // Set the background image for the header
-                        document.querySelector('header').style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
+                        document.querySelector('.echeader').style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
                         document.body.style.backgroundRepeat = 'repeat'; // Ensure the body background tiles
                     });
             }).catch(function(error) {
