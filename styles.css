@@ -4,7 +4,7 @@ body {
     overflow-x: auto;
     overflow-y: auto;
     background-color: rgb(17, 17, 17);
-    background-size: 2%;
+    background-size: auto auto;
 }
 
 /* Header section */
@@ -20,7 +20,7 @@ text-align:left;
     margin: 0px;
     padding: 0px;
     border-color: white;
-    background-size: 2%; /* Scale the background by 200% */
+    background-size: auto auto; /* Scale the background by 200% */
 }
 
 .header-container {
