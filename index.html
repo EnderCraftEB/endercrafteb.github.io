@@ -57,14 +57,14 @@ fetch(jarUrl)
                         document.getElementById('logo').appendChild(img);
                     }) // Load background image for the body
                     .then(() => {
-                        return zip.file('assets/website/stone_bricks.png').async('base64'); // Update with the correct path
+                        return zip.file('assets/minecraft/textures/block/stone_bricks.png').async('base64'); // Update with the correct path
                     }).then(function(base64) {
                         // Set the background image for the body
                         document.body.style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
                         document.body.style.backgroundRepeat = 'repeat'; // Ensure the body background tiles
                     }).then(() => {
                         // Load header background image
-                        return zip.file('assets/website/brown_planks.png').async('base64'); // Update with the correct path
+                        return zip.file('assets/endercraft/textures/block/brown_planks.png').async('base64'); // Update with the correct path
                     }).then(function(base64) {
                         // Set the background image for the header
                         document.querySelector('header').style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
