@@ -9,70 +9,92 @@ body {
 
 /* Header section */
 header {
-    background-color: #55a630; /* Minecraft green */
-    padding: 10px 20px;
+    background-color: rgb(33, 23, 16); /* Dark header background */
+    background-image: url('https://archive.ph/EbOdX/2098679e526a5553e9c2c9fa65d5e23621271d39.png'); /* Example background image */
+    background-size: cover; /* Cover the entire header */
+    height: 48px; /* Fixed height */
+    position: relative;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1000px; /* Adjust the max-width as needed */
-    margin: 0 auto;
+.header-container {
+    width: 1000px; /* Fixed width for header content */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between elements */
+    padding: 0 10px; /* Padding around the container */
 }
 
 .logo img {
-    max-width: 250px;
+    max-width: 260px; /* Slightly larger logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to grow and fill space */
 }
 
 nav ul {
+    display: flex; /* Display list items in a row */
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    align-items: center; /* Center nav items vertically */
 }
 
 nav ul li {
-    position: relative; /* For dropdown */
-    margin-right: 20px;
+    margin-right: 20px; /* Space between nav items */
+    position: relative; /* For dropdown positioning */
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255); /* White text for links */
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px; /* Set font size */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
 }
 
-/* Dropdown menu styles */
-nav ul li ul {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    padding: 10px;
-    list-style-type: none;
-    margin: 0;
+/* Dropdown styles */
+nav ul li .dropdown {
+    display: none; /* Hide dropdown initially */
+    position: absolute; /* Position relative to parent li */
+    top: 100%; /* Place below the nav item */
+    left: 0; /* Align to the left */
+    background-color: rgb(51, 51, 51); /* Dark background for dropdown */
+    padding: 10px 0; /* Padding around dropdown items */
+    z-index: 5; /* Ensure dropdown is above other elements */
 }
 
-nav ul li:hover ul {
-    display: block;
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
 }
 
-nav ul li ul li {
-    margin: 0;
+nav ul li .dropdown li {
+    margin: 0; /* Remove margin for dropdown items */
 }
 
-.auth-links {
-    margin-left: auto;
+nav ul li .dropdown li a {
+    padding: 6px 10px; /* Padding for dropdown links */
+    display: block; /* Block display for full click area */
+    color: rgb(255, 255, 255); /* White text for dropdown links */
 }
 
-.auth-links a {
-    color: rgb(170, 170, 255);
-    font-weight: bold;
-    text-decoration: none;
+.login-container {
+    text-align: right; /* Align login/register links to the right */
+    font-size: 16px; /* Set font size */
+}
+
+.login-container a {
+    color: rgb(170, 170, 255); /* Light blue color for links */
+    text-decoration: none; /* No underline */
+}
+
+.login-container a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Main content */
@@ -84,7 +106,7 @@ main {
 
 main h1 {
     font-size: 36px;
-    color: #55a630;
+    color: #55a630; /* Change to your desired color */
 }
 
 main p {
@@ -114,6 +136,9 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 footer p {
