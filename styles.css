@@ -27,7 +27,7 @@ header {
     display: flex; /* Use flexbox for alignment */
     align-items: left; /* Center vertically */
     justify-content: flex-start; /* Left align items */
-    padding: 0 10px; /* Padding around the container */
+    padding: 0 0; /* Padding around the container */
 }
 
 .logo img {
