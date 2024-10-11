@@ -32,7 +32,7 @@ header {
 
 .logo img {
     max-width: 260px; /* Slightly larger logo size */
-    height: auto; /* Maintain aspect ratio */
+    height: 48px; /* Maintain aspect ratio */
 }
 
 ul {
