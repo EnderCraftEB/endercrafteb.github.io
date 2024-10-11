@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Mod Website</title>
+    <title>EnderCraft Mod Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Pixelated font -->
 </head>
 <body>
     <header>
@@ -19,123 +20,28 @@
             </ul>
         </nav>
     </header>
-<style>
-    /* General page styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header section */
-header {
-    background-color: #55a630; /* Minecraft green */
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.logo img {
-    max-width: 250px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main content */
-main {
-    padding: 40px;
-    text-align: center;
-    background-color: #fff;
-}
-
-main h1 {
-    font-size: 36px;
-    color: #55a630;
-}
-
-main p {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.download-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3c6e71;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.download-btn:hover {
-    background-color: #2a4e56;
-}
-
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-</style>
     <main>
         <p id="status">Loading the mod's logo from the JAR file...</p>
         <section class="content">
-            <h1>Welcome to My Minecraft Mod</h1>
+            <h1>Welcome to EnderCraft</h1>
             <p>This mod brings an exciting new experience to your Minecraft gameplay.</p>
             <a href="https://endercrafteb.github.io/latest/endercraft.jar" class="download-btn">Download Now</a>
         </section>
     </main>
-
     <footer>
-        <p>© 2024 Your Mod Name</p>
+        <p>© 2024 EnderCraft</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
     <script>
         const jarUrl = "https://endercrafteb.github.io/latest/endercraft.jar";
 
-        // Fetch the JAR file directly from the public GitHub link
         fetch(jarUrl)
             .then(response => response.blob())
             .then(blob => {
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     JSZip.loadAsync(e.target.result).then(function(zip) {
-                        // Adjust path depending on where the logo is located inside your JAR file
                         return zip.file('assets/minecraft/textures/gui/title/minecraft.png').async('base64');
                     }).then(function(base64) {
                         const img = document.createElement('img');
