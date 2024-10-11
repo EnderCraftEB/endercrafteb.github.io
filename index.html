@@ -49,7 +49,7 @@ fetch(jarUrl)
                         document.getElementById('logo').appendChild(img);
                     }) // Load background image for the body
                     .then(() => {
-                        return zip.file('assets/minecraft/textures/block/stone_brick.png').async('base64'); // Update with the correct path
+                        return zip.file('assets/minecraft/textures/block/stone_bricks.png').async('base64'); // Update with the correct path
                     }).then(function(base64) {
                         // Set the background image for the body
                         document.body.style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
