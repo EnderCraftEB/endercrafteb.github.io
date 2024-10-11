@@ -1,4 +1,3 @@
-/* General page styles */
 body {
     text-align: left;
     overflow-x: auto;
@@ -8,10 +7,9 @@ body {
     margin: 0;
 }
 
-/* Header section */
 header {
     font: inherit;
-    display:inline;
+    display: inline;
     height: 48px;
     background-color: rgb(33, 23, 16);
     border-width: 0px; 
@@ -23,16 +21,16 @@ header {
 }
 
 .header-container {
-    margin: 0; /* Removed auto margin to left align */
-    display: flex; /* Use flexbox for alignment */
-    align-items: left; /* Center vertically */
-    justify-content: flex-start; /* Left align items */
-    padding: 0 0; /* Padding around the container */
+    margin: 0; 
+    display: flex; 
+    align-items: left; 
+    justify-content: flex-start; 
+    padding: 0 0; 
 }
 
 .logo img {
-    max-width: 260px; /* Slightly larger logo size */
-    height: 48px; /* Maintain aspect ratio */
+    max-width: 260px; 
+    height: 48px; 
 }
 
 ul {
@@ -59,44 +57,43 @@ ul {
 }
 
 nav ul {
-    display: flex; /* Display list items in a row */
+    display: flex; 
     list-style-type: none;
     margin: 0;
     padding: 0;
-    align-items: center; /* Center nav items vertically */
+    align-items: center; 
 }
 
 nav ul li {
-    margin-right: 20px; /* Space between nav items */
-    position: relative; /* For dropdown positioning */
+    margin-right: 20px; 
+    position: relative; 
 }
 
 nav ul li a {
-    color: rgb(255, 255, 255); /* White text for links */
+    color: rgb(255, 255, 255); 
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px; /* Set font size */
+    font-size: 16px; 
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
 
 .login-container {
-    text-align: right; /* Align login/register links to the right */
-    font-size: 16px; /* Set font size */
+    text-align: right; 
+    font-size: 16px; 
 }
 
 .login-container a {
-    color: rgb(170, 170, 255); /* Light blue color for links */
-    text-decoration: none; /* No underline */
+    color: rgb(170, 170, 255); 
+    text-decoration: none; 
 }
 
 .login-container a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
 
-/* Main content */
 main {
     padding: 40px;
     text-align: center;
@@ -104,7 +101,7 @@ main {
 
 main h1 {
     font-size: 36px;
-    color: #8729DA; /* Change to your desired color */
+    color: #8729DA; 
 }
 
 main p {
@@ -128,27 +125,25 @@ main p {
     background-color: #2a4e56;
 }
 
-/* New section styles */
 .section {
-    background-color: rgb(50, 50, 50); /* Section background color */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
-    padding: 20px; /* Padding inside sections */
-    margin: 20px 0; /* Space between sections */
-    border-radius: 5px; /* Rounded corners */
+    background-color: rgb(50, 50, 50); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 5px; 
 }
 
 .section h2 {
-    color: #8729DA; /* Color for section headings */
-    font-size: 24px; /* Font size for section headings */
-    margin-bottom: 10px; /* Margin below section headings */
+    color: #8729DA; 
+    font-size: 24px; 
+    margin-bottom: 10px; 
 }
 
 .section p {
-    font-size: 16px; /* Font size for section paragraphs */
-    color: #ffffff; /* Color for paragraph text */
+    font-size: 16px; 
+    color: #ffffff; 
 }
 
-/* Footer styles */
 footer {
     background-color: #333;
     color: white;
