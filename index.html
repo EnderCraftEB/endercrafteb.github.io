@@ -10,24 +10,26 @@
 <body>
     <header>
         <div class="echeader">
-            <div class="logo" id="logo">
+            <div class="logo" id="logo" aria-label="Logo">
                 <!-- Logo will be dynamically loaded from the JAR file -->
             </div>
-            <ul>
-                <li><a href="http://archive.today/o/EbOdX/https://minecraft.net/" target="_blank">Home</a></li>
-                <li>
-                    <a href="http://archive.today/o/EbOdX/https://minecraft.net/game" target="_blank">Game</a>
-                    <ul>
-                        <li><a href="http://archive.today/o/EbOdX/https://minecraft.net/game" target="_blank">What is Minecraft?</a></li>
-                        <li><a href="http://archive.today/o/EbOdX/https://minecraft.net/game/howtoplay" target="_blank">Getting started</a></li>
-                        <li><a href="http://archive.today/o/EbOdX/https://minecraft.net/game/credits" target="_blank">Credits</a></li>
-                    </ul>
-                </li>
-                <li><a href="http://archive.today/o/EbOdX/https://minecraft.net/community" target="_blank">Community</a></li>
-                <li><a href="http://archive.today/o/EbOdX/https://minecraft.net/store" target="_blank">Store</a></li>
-                <li><a href="http://archive.today/o/EbOdX/https://minecraft.net/profile" target="_blank">Profile</a></li>
-                <li><a href="http://archive.today/o/EbOdX/https://help.mojang.com/" target="_blank">Help</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Game</a>
+                        <ul>
+                            <li><a href="#">What is Minecraft?</a></li>
+                            <li><a href="#">Getting started</a></li>
+                            <li><a href="#">Credits</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -56,6 +58,7 @@
                             .then(function(base64) {
                                 const img = document.createElement('img');
                                 img.src = 'data:image/png;base64,' + base64;
+                                img.alt = "Minecraft Logo"; // Add alt text for accessibility
                                 document.getElementById('logo').appendChild(img);
                             })
                             // Load background image for the body
@@ -72,7 +75,6 @@
                             }).then(function(base64) {
                                 // Set the background image for the header
                                 document.querySelector('.echeader').style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
-                                document.body.style.backgroundRepeat = 'repeat'; // Ensure the body background tiles
                             });
                     }).catch(function(error) {
                         console.error("Error extracting assets from the JAR: ", error);
