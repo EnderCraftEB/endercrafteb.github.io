@@ -6,25 +6,23 @@ body {
     background-color: rgb(17, 17, 17);
     background-size: 1%;
     margin: 0;
-
 }
 
 /* Header section */
 header {
-
-    font-size:100%;
-    font:inherit;
-    vertical-align:baseline;
-    display:block;
-    height:48px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    height: 48px;
     background-color: rgb(33, 23, 16);
-    border-width: 0px; border-style: none;
+    border-width: 0px; 
+    border-style: none;
     margin: 0px;
     padding: 0px;
     border-color: white;
     background-size: 1%; /* Scale the background by 200% */
 }
-
 
 .header-container {
     margin: 0; /* Removed auto margin to left align */
@@ -38,7 +36,6 @@ header {
     max-width: 260px; /* Slightly larger logo size */
     height: auto; /* Maintain aspect ratio */
 }
-
 
 ul {
     text-align: left;
@@ -62,9 +59,7 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
     unicode-bidi: isolate;
-
 }
-
 
 nav ul {
     display: flex; /* Display list items in a row */
@@ -134,6 +129,26 @@ main p {
 
 .download-btn:hover {
     background-color: #2a4e56;
+}
+
+/* New section styles */
+.section {
+    background-color: rgb(50, 50, 50); /* Section background color */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+    padding: 20px; /* Padding inside sections */
+    margin: 20px 0; /* Space between sections */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.section h2 {
+    color: #8729DA; /* Color for section headings */
+    font-size: 24px; /* Font size for section headings */
+    margin-bottom: 10px; /* Margin below section headings */
+}
+
+.section p {
+    font-size: 16px; /* Font size for section paragraphs */
+    color: #ffffff; /* Color for paragraph text */
 }
 
 /* Footer styles */
