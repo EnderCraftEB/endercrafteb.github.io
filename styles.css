@@ -1,11 +1,29 @@
 /* General page styles */
 body {
-text-align: left;overflow-x: auto;overflow-y: auto; background-color: rgb(17, 17, 17); background-size: auto auto; background-position: 0% 0%;position: relative;min-height: 1369px;
+text-align: left;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: rgb(17, 17, 17);
+    background-size: 200%; /* Scale the background by 200% */
+    background-position: 0% 0%;
+    position: relative;
+    min-height: 1369px;
 }
 
 /* Header section */
 header {
-text-align:left;font-size:100%;font:inherit;vertical-align:baseline;display:block;height:48px;background-color: rgb(33, 23, 16); border-width: 0px; border-style: none; margin: 0px; padding: 0px; border-color: white;
+text-align:left;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+    display:block;
+    height:48px;
+    background-color: rgb(33, 23, 16);
+    border-width: 0px; border-style: none;
+    margin: 0px;
+    padding: 0px;
+    border-color: white;
+    background-size: 200%; /* Scale the background by 200% */
 }
 
 .header-container {
