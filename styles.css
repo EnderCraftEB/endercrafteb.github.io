@@ -11,6 +11,22 @@ header {
     padding: 20px; /* Adds some space around the header */
 }
 
+ul {
+    text-align: left;
+    font: inherit;
+    vertical-align: baseline;
+    font-size: 16px;
+    font-weight: bold;
+    width: 415px;
+    float: left;
+    list-style: none outside none;
+    border-width: 0px;
+    border-style: none;
+    margin: 0px;
+    padding: 14px 0px 0px;
+    border-color: white;
+}
+
 nav ul {
     list-style-type: none; /* Removes bullet points */
     margin: 0; /* Removes default margin */
