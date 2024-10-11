@@ -60,7 +60,7 @@ fetch(jarUrl)
                     }).then(function(base64) {
                         // Set the background image for the header
                         document.querySelector('header').style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
-                        document.querySelector('header').style.backgroundSize = 'cover'; // Ensure the header background covers the area
+                        document.body.style.backgroundRepeat = 'repeat'; // Ensure the body background tiles
                     });
             }).catch(function(error) {
                 console.error("Error extracting assets from the JAR: ", error);
