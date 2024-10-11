@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnderCraft Mod Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Pixelated font -->
 </head>
 <body>
     <header>
         <div class="echeader">
             <div class="logo" id="logo" aria-label="Logo">
-                <!-- Logo will be dynamically loaded from the JAR file -->
             </div>
             <nav>
                 <ul>
@@ -36,35 +34,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
     <script>
         const jarUrl = "https://endercrafteb.github.io/endercraft.jar";
-        // Fetch the JAR file
         fetch(jarUrl)
             .then(response => response.blob())
             .then(blob => {
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     JSZip.loadAsync(e.target.result).then(function(zip) {
-                        // Load logo
                         return zip.file('assets/minecraft/textures/gui/title/minecraft.png').async('base64')
                             .then(function(base64) {
                                 const img = document.createElement('img');
                                 img.src = 'data:image/png;base64,' + base64;
-                                img.alt = "Minecraft Logo"; // Add alt text for accessibility
+                                img.alt = "EnderCraft Logo";
                                 document.getElementById('logo').appendChild(img);
                             })
-                            // Load background image for the body
                             .then(() => {
                                 return zip.file('assets/minecraft/textures/block/deepslate_tiles.png').async('base64');
                             }).then(function(base64) {
-                                // Set the background image for the body
                                 document.body.style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
-                                document.body.style.backgroundRepeat = 'repeat'; // Ensure the body background tiles
+                                document.body.style.backgroundRepeat = 'repeat';
                             })
                             .then(() => {
-                                // Load header background image
                                 return zip.file('assets/endercraft/textures/block/brown_planks.png').async('base64');
                             }).then(function(base64) {
-                                // Set the background image for the header
                                 document.querySelector('.echeader').style.backgroundImage = 'url(data:image/png;base64,' + base64 + ')';
+                                document.body.style.backgroundRepeat = 'repeat';
                             });
                     }).catch(function(error) {
                         console.error("Error extracting assets from the JAR: ", error);
