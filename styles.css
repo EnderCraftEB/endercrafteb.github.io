@@ -1,4 +1,4 @@
-    /* General page styles */
+/* General page styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f2f2f2;
@@ -10,9 +10,15 @@ body {
 /* Header section */
 header {
     background-color: #55a630; /* Minecraft green */
-    padding: 20px;
-    text-align: center;
-    position: relative;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px; /* Adjust the max-width as needed */
+    margin: 0 auto;
 }
 
 .logo img {
@@ -23,10 +29,11 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
+    position: relative; /* For dropdown */
     margin-right: 20px;
 }
 
@@ -38,6 +45,34 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Dropdown menu styles */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin: 0;
+}
+
+.auth-links {
+    margin-left: auto;
+}
+
+.auth-links a {
+    color: rgb(170, 170, 255);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 /* Main content */
@@ -79,9 +114,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
 }
 
 footer p {
